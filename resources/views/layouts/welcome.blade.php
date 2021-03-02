@@ -82,7 +82,7 @@
         <div class="flex-center position-ref full-height">
 
                 <div class="top-right links">
-                    <a href="{{ route('protection.membership') }}">{{ __('views.welcome.member_area') }}</a>
+                    <!-- <a href="{{ route('protection.membership') }}">{{ __('views.welcome.member_area') }}</a> -->
 
                     @if (Route::has('login'))
                         @if (!Auth::check())
@@ -102,8 +102,8 @@
             <div class="content">
                 @yield('content')
                 <div class="footer">
-                    Credits:&nbsp;
-                    <a href="http://l64.cc/nlaff/VXZPYHCTC" target="_blank" title="Online Software License Management"><i class="fa fa-lock" aria-hidden="true"></i>Labs64 NetLicensing</a>&nbsp;&bull;&nbsp;
+                    <!-- Credits:&nbsp;
+                    <a href="http://l64.cc/nlaff/VXZPYHCTC" target="_blank" title="Online Software License Management"><i class="fa fa-lock" aria-hidden="true"></i>Labs64 NetLicensing</a>&nbsp;&bull;&nbsp; -->
                 </div>
             </div>
         </div>
