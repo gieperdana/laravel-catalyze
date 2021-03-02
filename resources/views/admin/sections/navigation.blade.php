@@ -43,6 +43,12 @@
                             {{ __('views.backend.section.navigation.menu_1_1') }}
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('admin.posts') }}">
+                            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                            {{ __('views.backend.section.navigation.menu_1_2') }}
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

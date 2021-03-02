@@ -65,6 +65,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('permissions/{user}/repeat', 'PermissionController@repeat')->name('permissions.repeat');
     Route::get('dashboard/log-chart', 'DashboardController@getLogChartData')->name('dashboard.log.chart');
     Route::get('dashboard/registration-chart', 'DashboardController@getRegistrationChartData')->name('dashboard.registration.chart');
+
+    //Posts
+    Route::get('posts', 'UserController@index')->name('posts');
+    Route::get('posts/restore', 'UserController@restore')->name('posts.restore');
+    Route::get('posts/{id}/restore', 'UserController@restoreUser')->name('posts.restore-user');
+    Route::get('posts/{user}', 'UserController@show')->name('posts.show');
+    Route::get('posts/{user}/edit', 'UserController@edit')->name('posts.edit');
+    Route::put('posts/{user}', 'UserController@update')->name('posts.update');
+    Route::any('posts/{id}/destroy', 'UserController@destroy')->name('posts.destroy');
 });
 
 
