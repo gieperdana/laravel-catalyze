@@ -74,7 +74,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('posts/{user}', 'UserController@show')->name('posts.show');
     Route::get('posts/{user}/edit', 'UserController@edit')->name('posts.edit');
     Route::put('posts/{user}', 'UserController@update')->name('posts.update');
-    Route::any('posts/{id}/destroy', 'UserController@destroy')->name('posts.destroy');
+    Route::any('posts/{id}/destroy', 'PostController@destroy')->name('posts.destroy');
 });
 
 

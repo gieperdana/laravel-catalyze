@@ -29,8 +29,10 @@
                         </a>
                         <a class="btn btn-xs btn-info" href="{{ route('admin.posts.edit', [$post->id]) }}" data-toggle="tooltip" data-placement="top" data-title="{{ __('views.admin.users.index.edit') }}">
                             <i class="fa fa-pencil"></i>
+                        </a><br/>
+                        <a class="btn btn-xs btn-danger" href="{{ route('admin.posts.destroy', [$post->id]) }}" data-toggle="tooltip" data-placement="top" data-title="{{ __('views.admin.users.index.delete') }}">
+                            <i class="fa fa-trash"></i>
                         </a>
-                        
                     </td>
                 </tr>
             @endforeach

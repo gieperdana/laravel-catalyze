@@ -93,7 +93,14 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $status = Post::destroy($id);
+
+        if($status)
+        {
+            return redirect()->route('admin.posts')->withFlashSuccess('User Deleted Successfully!');
+        }
+
+        return redirect()->route('admin.posts')->withFlashDanger('Unable to Delete User!');
     }
 
     public function api_post(){

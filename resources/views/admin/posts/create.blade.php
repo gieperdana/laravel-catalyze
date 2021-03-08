@@ -105,7 +105,7 @@
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <input id="image_url" type="text" class="form-control col-md-7 col-xs-12 @if($errors->has('image_url')) parsley-error @endif"
-                               name="image_url">
+                               name="image_url" value="https://www.incimages.com/uploaded_files/image/1920x1080/getty_541001004_401513.jpg">
                         @if($errors->has('image_url'))
                             <ul class="parsley-errors-list filled">
                                 @foreach($errors->get('image_url') as $error)
