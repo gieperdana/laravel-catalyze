@@ -9,8 +9,7 @@
 
             <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name" >
-                        <!-- {{ __('views.admin.users.edit.name') }} -->
-                        Title
+                        {{ __('views.admin.posts.create.title.input') }}
                         <span class="required">*</span>
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -28,8 +27,7 @@
 
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sub_title">
-                        <!-- {{ __('views.admin.users.edit.email') }} -->
-                        Sub Title
+                        {{ __('views.admin.posts.create.subtitle.input') }}
                         <span class="required">*</span>
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -47,16 +45,13 @@
 
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="paragraph_1">
-                        <!-- {{ __('views.admin.users.edit.password') }} -->
-                        Paragraph 1
+                        {{ __('views.admin.posts.create.paragraph1.input') }}
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <!-- <input id="password" type="password" class="form-control col-md-7 col-xs-12 @if($errors->has('password')) parsley-error @endif"
-                               name="password"> -->
                         <textarea id="paragrap1" name="paragraph_1" rows="5" style="width:500px">{{$post->paragraph1}}</textarea>
-                        @if($errors->has('password'))
+                        @if($errors->has('paragraph1'))
                             <ul class="parsley-errors-list filled">
-                                @foreach($errors->get('password') as $error)
+                                @foreach($errors->get('paragraph1') as $error)
                                     <li class="parsley-required">{{ $error }}</li>
                                 @endforeach
                             </ul>
@@ -66,14 +61,13 @@
 
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="paragraph_2">
-                        <!-- {{ __('views.admin.users.edit.confirm_password') }} -->
-                        Paragraph 2
+                        {{ __('views.admin.posts.create.paragraph2.input') }}
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                     <textarea id="paragrap2" name="paragraph_2" rows="5" style="width:500px">{{$post->paragraph2}}</textarea>
-                        @if($errors->has('password_confirmation'))
+                        @if($errors->has('paragraph2'))
                             <ul class="parsley-errors-list filled">
-                                @foreach($errors->get('password_confirmation') as $error)
+                                @foreach($errors->get('paragraph2') as $error)
                                     <li class="parsley-required">{{ $error }}</li>
                                 @endforeach
                             </ul>
@@ -83,14 +77,13 @@
 
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="paragraph_3">
-                        <!-- {{ __('views.admin.users.edit.confirm_password') }} -->
-                        Paragraph 3
+                        {{ __('views.admin.posts.create.paragraph3.input') }}
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                     <textarea id="paragrap3" name="paragraph_3" rows="5" style="width:500px">{{$post->paragraph3}}</textarea>
-                        @if($errors->has('password_confirmation'))
+                        @if($errors->has('paragrap3'))
                             <ul class="parsley-errors-list filled">
-                                @foreach($errors->get('password_confirmation') as $error)
+                                @foreach($errors->get('paragrap3') as $error)
                                     <li class="parsley-required">{{ $error }}</li>
                                 @endforeach
                             </ul>
@@ -100,8 +93,7 @@
 
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="image_url">
-                        <!-- {{ __('views.admin.users.edit.confirm_password') }} -->
-                        Image URL
+                        {{ __('views.admin.posts.create.url.input') }}
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <input id="image_url" type="text" class="form-control col-md-7 col-xs-12 @if($errors->has('image_url')) parsley-error @endif"
@@ -118,8 +110,7 @@
 
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="caption_image">
-                        <!-- {{ __('views.admin.users.edit.confirm_password') }} -->
-                        Caption Image
+                        {{ __('views.admin.posts.create.captionimage.input') }}
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <input id="caption_image" type="text" class="form-control col-md-7 col-xs-12 @if($errors->has('caption_image')) parsley-error @endif"
@@ -136,8 +127,7 @@
 
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="quote">
-                        <!-- {{ __('views.admin.users.edit.confirm_password') }} -->
-                        Quote
+                        {{ __('views.admin.posts.create.quote.input') }}
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <input id="quote" type="text" class="form-control col-md-7 col-xs-12 @if($errors->has('quote')) parsley-error @endif"
@@ -154,8 +144,7 @@
 
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="publish">
-                        <!-- {{ __('views.admin.users.edit.roles') }} -->
-                        Publish
+                        {{ __('views.admin.posts.create.publish.input') }}
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <select id="publish" name="publish" class="select2" style="width: 100%" autocomplete="off">

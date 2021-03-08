@@ -177,5 +177,14 @@
   "**************************** Posts **********************": "Posts i18n",
   "views.admin.posts.index.title": "Posts",
   "views.admin.posts.create.title": "Create Post",
-  "views.admin.posts.edit.title": "Edit "
+  "views.admin.posts.edit.title": "Edit ",
+  "views.admin.posts.create.title.input": "Title ",
+  "views.admin.posts.create.subtitle.input": "Sub Title ",
+  "views.admin.posts.create.paragraph1.input": "Paragraph 1 ",
+  "views.admin.posts.create.paragraph2.input": "Paragraph 2 ",
+  "views.admin.posts.create.paragraph3.input": "Paragraph 3 ",
+  "views.admin.posts.create.url.input": "Image URL ",
+  "views.admin.posts.create.captionimage.input": "Caption Image ",
+  "views.admin.posts.create.quote.input": "Quote ",
+  "views.admin.posts.create.publish.input": "Publish "
 }
