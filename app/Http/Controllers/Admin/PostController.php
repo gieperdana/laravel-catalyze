@@ -70,7 +70,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('admin.posts.edit', ['post' => $post]);
     }
 
     /**
@@ -82,7 +83,23 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+        $post->title = $request->input('title');
+        $post->sub_title = $request->input('sub_title');
+        $post->paragraph1 = $request->input('paragraph_1');
+        $post->paragraph2 = $request->input('paragraph_2');
+        $post->paragraph3 = $request->input('paragraph_3');
+        $post->image = $request->input('image_url');
+        $post->caption_image = $request->input('caption_image');
+        $post->quote = $request->input('quote');
+        $post->published = $request->input('publish');
+
+        if($post->save())
+        {
+            return redirect()->route('admin.posts')->withFlashSuccess('Post Updated Successfully!');
+        }
+
+        return redirect()->route('admin.posts')->withFlashDanger('Unable to Update Post!');
     }
 
     /**
@@ -97,10 +114,10 @@ class PostController extends Controller
 
         if($status)
         {
-            return redirect()->route('admin.posts')->withFlashSuccess('User Deleted Successfully!');
+            return redirect()->route('admin.posts')->withFlashSuccess('Post Deleted Successfully!');
         }
 
-        return redirect()->route('admin.posts')->withFlashDanger('Unable to Delete User!');
+        return redirect()->route('admin.posts')->withFlashDanger('Unable to Delete Post!');
     }
 
     public function api_post(){

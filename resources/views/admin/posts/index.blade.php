@@ -24,9 +24,6 @@
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->sub_title }}</td>
                     <td>
-                        <a class="btn btn-xs btn-primary" href="{{ route('admin.posts.show', [$post->id]) }}" data-toggle="tooltip" data-placement="top" data-title="{{ __('views.admin.users.index.show') }}">
-                            <i class="fa fa-eye"></i>
-                        </a>
                         <a class="btn btn-xs btn-info" href="{{ route('admin.posts.edit', [$post->id]) }}" data-toggle="tooltip" data-placement="top" data-title="{{ __('views.admin.users.index.edit') }}">
                             <i class="fa fa-pencil"></i>
                         </a><br/>

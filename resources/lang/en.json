@@ -176,5 +176,6 @@
   "views.membership.not_valid": "not valid",
   "**************************** Posts **********************": "Posts i18n",
   "views.admin.posts.index.title": "Posts",
-  "views.admin.posts.create.title": "Create Post"
+  "views.admin.posts.create.title": "Create Post",
+  "views.admin.posts.edit.title": "Edit "
 }

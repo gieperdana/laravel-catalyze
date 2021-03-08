@@ -70,10 +70,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('posts', 'PostController@index')->name('posts');
     Route::get('posts/create', 'PostController@create')->name('posts.create');
     Route::post('posts/store', 'PostController@store')->name('posts.store');
-    Route::get('posts/{id}/restore', 'UserController@restoreUser')->name('posts.restore-user');
-    Route::get('posts/{user}', 'UserController@show')->name('posts.show');
-    Route::get('posts/{user}/edit', 'UserController@edit')->name('posts.edit');
-    Route::put('posts/{user}', 'UserController@update')->name('posts.update');
+    Route::get('posts/{post}/edit', 'PostController@edit')->name('posts.edit');
+    Route::put('posts/{post}', 'PostController@update')->name('posts.update');
     Route::any('posts/{id}/destroy', 'PostController@destroy')->name('posts.destroy');
 });
 
