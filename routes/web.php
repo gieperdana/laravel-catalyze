@@ -67,8 +67,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('dashboard/registration-chart', 'DashboardController@getRegistrationChartData')->name('dashboard.registration.chart');
 
     //Posts
-    Route::get('posts', 'UserController@index')->name('posts');
-    Route::get('posts/restore', 'UserController@restore')->name('posts.restore');
+    Route::get('posts', 'PostController@index')->name('posts');
+    Route::get('posts/create', 'PostController@create')->name('posts.create');
+    Route::post('posts/store', 'PostController@store')->name('posts.store');
     Route::get('posts/{id}/restore', 'UserController@restoreUser')->name('posts.restore-user');
     Route::get('posts/{user}', 'UserController@show')->name('posts.show');
     Route::get('posts/{user}/edit', 'UserController@edit')->name('posts.edit');

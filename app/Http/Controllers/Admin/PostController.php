@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Post\Post;
 
 class PostController extends Controller
 {
@@ -14,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.posts.index', ['posts' => Post::all()]);
     }
 
     /**
@@ -24,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.posts.create');
     }
 
     /**
@@ -35,7 +36,19 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->sub_title = $request->input('sub_title');
+        $post->paragraph1 = $request->input('paragraph_1');
+        $post->paragraph2 = $request->input('paragraph_2');
+        $post->paragraph3 = $request->input('paragraph_3');
+        $post->image = $request->input('image_url');
+        $post->caption_image = $request->input('caption_image');
+        $post->quote = $request->input('quote');
+        $post->published = $request->input('publish');
+        $post->save();
+
+        return redirect()->route('admin.posts')->withFlashSuccess(' Posts Added Successfully!');
     }
 
     /**
@@ -81,5 +94,25 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function api_post(){
+        $posts = Post::all();
+        if($posts){
+            $status = 200;
+        }else{
+            $status = 404;
+        }
+        return response()->json(['status' => $status, 'data' => $posts],$status);
+    }
+
+    public function api_post_detail(Request $request,$id){
+        $post = Post::find($id);
+        if($post){
+            $status = 200;
+        }else{
+            $status = 404;
+        }
+        return response()->json(['status' => $status, 'data' => $post],$status);
     }
 }

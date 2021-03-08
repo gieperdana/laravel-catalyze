@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::group(['namespace' => 'Admin', 'middleware' => 'cors',], function () {
+    Route::get('posts', 'PostController@api_post')->name('api.posts');
+    Route::get('posts/{id}', 'PostController@api_post_detail')->name('api.post');
+});

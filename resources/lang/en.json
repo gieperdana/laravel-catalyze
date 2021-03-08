@@ -173,5 +173,8 @@
   "views.membership.table_header_5": "Expires",
   "views.membership.table_header_6": "Actions",
   "views.membership.valid": "valid",
-  "views.membership.not_valid": "not valid"
+  "views.membership.not_valid": "not valid",
+  "**************************** Posts **********************": "Posts i18n",
+  "views.admin.posts.index.title": "Posts",
+  "views.admin.posts.create.title": "Create Post"
 }
